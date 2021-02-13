@@ -44,3 +44,12 @@ const getRandomComment = (sentences, sentenceMaxCount, sentenceMinCount = 1) => 
 
   return comment;
 }
+
+const createComment = (idComment) => {
+  return {
+    id: +`${idPhotoCounter}${idComment}`,
+    avatar: `img/avatar-${window._.random(AVATAR_MIN_COUNT, AVATAR_MAX_COUNT)}.svg`,
+    message: getRandomComment(SENTENCES, SENTENCE_MAX_COUNT),
+    name: USER_NAMES[window._.random(USER_NAMES.length - 1)],
+  }
+}
