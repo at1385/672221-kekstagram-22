@@ -53,3 +53,15 @@ const createComment = (idComment) => {
     name: USER_NAMES[window._.random(USER_NAMES.length - 1)],
   }
 }
+
+const createPhoto = () => {
+  let idCommentCounter = 0;
+
+  return {
+    id: ++idPhotoCounter,
+    url: `photos/${idPhotoCounter}.jpg`,
+    description: 'Описание',
+    likes: window._.random(LIKE_MIN_COUNT, LIKE_MAX_COUNT),
+    comments: new Array(window._.random(MAX_COUNT)).fill(null).map(() => createComment(++idCommentCounter)),
+  }
+}
