@@ -65,3 +65,6 @@ const createPhoto = () => {
     comments: new Array(window._.random(MAX_COUNT)).fill(null).map(() => createComment(++idCommentCounter)),
   }
 }
+
+const photos = new Array(MAX_COUNT).fill(null).map(() => createPhoto());
+photos;
