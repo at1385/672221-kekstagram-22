@@ -26,3 +26,21 @@ const SENTENCES = [
 const USER_NAMES = ['Артём', 'Марина', 'Николай', 'Павел', 'Соня', 'Влад', 'Оля'];
 
 let idPhotoCounter = 0;
+
+const getRandomComment = (sentences, sentenceMaxCount, sentenceMinCount = 1) => {
+  const sentenceCount = window._.random(sentenceMinCount, sentenceMaxCount);
+
+  let comment = sentences[window._.random(sentences.length - 1)];
+
+  for (let i = 1; i < sentenceCount; i++) {
+    let sentence = '';
+
+    do {
+      sentence = sentences[window._.random(sentences.length - 1)];
+    } while (sentence === comment);
+
+    comment += ` ${sentence}`;
+  }
+
+  return comment;
+}
