@@ -59,5 +59,6 @@ const createPhoto = () => {
   }
 }
 
-const photos = new Array(MAX_COUNT).fill(null).map(() => createPhoto());
-photos;
+const createPhotos = () => new Array(MAX_COUNT).fill(null).map(() => createPhoto());
+
+export {createPhotos};

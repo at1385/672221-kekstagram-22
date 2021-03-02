@@ -1,2 +1,2 @@
 import './util.js';
-import './photos.js'
+import './create-photos.js'
