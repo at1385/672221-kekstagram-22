@@ -2,3 +2,7 @@ const checkStringLength = (string, maxLength) => (string.length <= maxLength) ? 
 
 const body = document.querySelector('body');
 
+const isEscPress = (evt) => {
+  return evt.key === ('Escape' || 'Esc');
+};
+
