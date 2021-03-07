@@ -6,3 +6,4 @@ const isEscPress = (evt) => {
   return evt.key === ('Escape' || 'Esc');
 };
 
+export {checkStringLength, body, isEscPress};
